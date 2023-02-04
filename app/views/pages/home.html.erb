@@ -1,2 +1,6 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Retro Rentals</h1>
+<p>Video Games</p>
+
+<% @video_games.each do |video_game|
+  <li> <%= link_to video_game.title, video_game_path(video_game), class: "text-decoration-none" %> </li>
+end %>
