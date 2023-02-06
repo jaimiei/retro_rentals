@@ -1,0 +1,9 @@
+<div class="container">
+  <h1><%= @video_game.title %></h1>
+  <p><strong>Console: </strong><%= @video_game.console.capitalize %></p>
+  <p><strong>Genre: </strong> <%= @video_game.genre.capitalize %></p>
+  <br>
+  <%= link_to "Home", video_games_path, class: "text-decoration-none" %>
+  <br>
+  <br>
+</div>
