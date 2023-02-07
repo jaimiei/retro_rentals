@@ -10,10 +10,10 @@ puts "Cleaning database..."
 VideoGame.destroy_all
 
 puts "Creating video games..."
-mgs = {title: "Metal Gear Solid", console: "playstation", genre: "action"}
-gta =  {title: "GTA: Vice City", console: "playstation", genre: "action"}
-cod = {title: "Call of Duty: Modern Warfare", console: "Cross-platform", genre: "shooter"}
-zelda = {title: "Legend of Zelda: Breath of the Wild", console: "Nintendo", genre: "RPG"}
+mgs = { title: "Metal Gear Solid", console: "playstation", genre: "action" }
+gta = { title: "GTA: Vice City", console: "playstation", genre: "action" }
+cod = { title: "Call of Duty: Modern Warfare", console: "Cross-platform", genre: "shooter" }
+zelda = { title: "Legend of Zelda: Breath of the Wild", console: "Nintendo", genre: "RPG" }
 
 [mgs, gta, cod, zelda].each do |attributes|
   video_game = VideoGame.create!(attributes)
