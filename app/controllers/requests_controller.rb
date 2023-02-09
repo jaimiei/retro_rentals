@@ -1,12 +1,13 @@
 class RequestsController < ApplicationController
+  before_action :set_video_game
   def new
     @request = Request.new
   end
 
   def create
-    @list = List.new(list_params)
-    if @list.save
-      redirect_to list_path(@list)
+    @request = Request.new(request_params)
+    if @request.save
+      redirect_to requests_path(@request)
     else
       render :index, status: :unprocessable_entity
     end
@@ -14,7 +15,11 @@ class RequestsController < ApplicationController
 
   private
 
-  def list_params
-    params.require(:list).permit(:name, :photo)
+  def set_video_game
+    @video_game = VideoGame.find(params[:video_game_id])
+  end
+
+  def request_params
+    params.require(:request).permit()
   end
 end
