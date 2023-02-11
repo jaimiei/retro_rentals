@@ -4,12 +4,17 @@ class RequestsController < ApplicationController
     @request = Request.new
   end
 
+  def show
+  end
+
   def create
     @request = Request.new(request_params)
+    @request.user = current_user
+    @request.video_game = @video_game
     if @request.save
-      redirect_to requests_path(@request)
+      redirect_to video_game_request_path(@video_game, @request), notice: "booking successful!"
     else
-      render :index, status: :unprocessable_entity
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -20,6 +25,6 @@ class RequestsController < ApplicationController
   end
 
   def request_params
-    params.require(:request).permit()
+    params.require(:request).permit(:start_date, :end_date, :video_game_id)
   end
 end
