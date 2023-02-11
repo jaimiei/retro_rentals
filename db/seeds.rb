@@ -74,6 +74,8 @@ mario = VideoGame.new(title: "Super Mario 64", console: "Nintendo", genre: "Plat
 mario.photo.attach(io: mario_cover, filename: "mario_xn89oa", content_type: "image/jpg")
 mario.save
 
+User.create!(email: "test@retro.com", password: "retrotest")
+
 # cod = { title: "Call of Duty 4: Modern Warfare", console: "Cross-platform", genre: "Shooter" }
 # zelda = { title: "Legend of Zelda: Ocarina of Time", console: "Nintendo", genre: "RPG" }
 # sonic = { title: "Sonic the Hedgehog", console: "Sega", genre: "Platformer" }
