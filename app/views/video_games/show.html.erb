@@ -3,7 +3,8 @@
   <p><strong>Console: </strong><%= @video_game.console.capitalize %></p>
   <p><strong>Genre: </strong> <%= @video_game.genre.capitalize %></p>
   <br>
-  <%= link_to "Home", video_games_path, class: "text-decoration-none" %>
+  <%= link_to "Home", root_path, class: "text-decoration-none" %>
   <br>
+  <%= link_to "Video Games", video_games_path, class: "text-decoration-none" %>
   <br>
 </div>
