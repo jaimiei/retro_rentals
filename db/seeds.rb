@@ -14,13 +14,19 @@ VideoGame.destroy_all
 puts "Creating video games..."
 
 mgs_cover = URI.open("https://res.cloudinary.com/doaf60lu6/image/upload/v1676045290/mgs_tyqflm.jpg")
-mgs = VideoGame.new(title: "Metal Gear Solid", console: "Playstation", genre: "Action")
+mgs = VideoGame.new(
+  title: "Metal Gear Solid",
+  console: "Playstation",
+  genre: "Action")
+  # summary: "Players control Solid Snake, a soldier who infiltrates a nuclear weapons facility to
+  #  neutralize the terrorist threat from FOXHOUND, a renegade special forces unit.[7] Snake must
+  #   liberate hostages and stop the terrorists from launching a nuclear strike.")
 mgs.photo.attach(io: mgs_cover, filename: "mgs_tyqflm", content_type: "image/jpg")
 mgs.save
 
 gta_cover = URI.open("https://res.cloudinary.com/doaf60lu6/image/upload/v1676045290/gta_d3gmul.webp")
 gta = VideoGame.new(title: "Grand Theft Auto: Vice City", console: "Playstation", genre: "Action")
-gta.photo.attach(io: gta_cover, filename: "gta_d3gmul", content_type: "image/WebP")
+gta.photo.attach(io: gta_cover, filename: "gta_d3gmul", content_type: "image/webp")
 gta.save
 
 cod_cover = URI.open("https://res.cloudinary.com/doaf60lu6/image/upload/v1676045289/cod_cuyn5b.jpg")
@@ -30,9 +36,43 @@ cod.save
 
 zelda_cover = URI.open("https://res.cloudinary.com/doaf60lu6/image/upload/v1676045289/Zelda_hwzt09.webp")
 zelda = VideoGame.new(title: "Legend of Zelda: Ocarina of Time", console: "Nintendo", genre: "RPG")
-zelda.photo.attach(io: zelda_cover, filename: "Zelda_hwzt09", content_type: "image/WebP")
+zelda.photo.attach(io: zelda_cover, filename: "Zelda_hwzt09", content_type: "image/webp")
 zelda.save
 
+colossus_cover = URI.open("https://res.cloudinary.com/doaf60lu6/image/upload/v1676111399/colossus_fzselv.jpg")
+colossus = VideoGame.new(title: "Shadow of the Colossus", console: "Playstation", genre: "Action")
+colossus.photo.attach(io: colossus_cover, filename: "colossus_fzselv", content_type: "image/jpg")
+colossus.save
+
+crash_cover = URI.open("https://res.cloudinary.com/doaf60lu6/image/upload/v1676111399/crash_dkhbhg.webp")
+crash = VideoGame.new(
+  title: "Crash Bandicoot",
+  console: "Playstation",
+  genre: "Platformer")
+  # summary: "The game's premise chronicles the creation of the titular Crash, a bandicoot who has been uplifted
+  # by the mad scientist Doctor Neo Cortex."
+crash.photo.attach(io: crash_cover, filename: "crash_dkhbhg", content_type: "image/webp")
+crash.save
+
+goldeneye_cover = URI.open("https://res.cloudinary.com/doaf60lu6/image/upload/v1676111399/goldeneye_f0z2of.webp")
+goldeneye = VideoGame.new(
+  title: "Goldeneye 007",
+  console: "Nintendo",
+  genre: "Shooter")
+  # summary: "Based on the 1995 James Bond film GoldenEye, the player controls the secret agent James Bond to prevent
+  # a criminal syndicate from using a satellite weapon."
+goldeneye.photo.attach(io: goldeneye_cover, filename: "goldeneye_f0z2of", content_type: "image/webp")
+goldeneye.save
+
+pokemon_cover = URI.open("https://res.cloudinary.com/doaf60lu6/image/upload/v1676111399/pokemon_mwt39l.png")
+pokemon = VideoGame.new(title: "Pokemon Red Version", console: "Nintendo", genre: "RPG")
+pokemon.photo.attach(io: pokemon_cover, filename: "pokemon_mwt39l", content_type: "image/png")
+pokemon.save
+
+mario_cover = URI.open("https://res.cloudinary.com/doaf60lu6/image/upload/v1676111399/mario_xn89oa.jpg")
+mario = VideoGame.new(title: "Super Mario 64", console: "Nintendo", genre: "Platformer")
+mario.photo.attach(io: mario_cover, filename: "mario_xn89oa", content_type: "image/jpg")
+mario.save
 
 # cod = { title: "Call of Duty 4: Modern Warfare", console: "Cross-platform", genre: "Shooter" }
 # zelda = { title: "Legend of Zelda: Ocarina of Time", console: "Nintendo", genre: "RPG" }
