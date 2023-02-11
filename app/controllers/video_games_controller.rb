@@ -6,4 +6,11 @@ class VideoGamesController < ApplicationController
   def show
     @video_game = VideoGame.find(params[:id])
   end
+
+  private
+
+  def video_game_params
+    params.require(:video_game).permit(:title, :console, :genre, :photo)
+  end
+
 end

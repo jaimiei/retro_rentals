@@ -8,15 +8,20 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
+    <%= link_to root_path, class: "navbar-logo" do %>
+      <%= image_tag "rr-logo.png" %>
+    <% end %>
+
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item active">
+          <%# <li class="nav-item active">
             <%= link_to "Home", root_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item active">
+          <%# </li> %>
+          <%# <li class="nav-item active">
             <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "nav-link" %>
-          </li>
+          <%# </li> %>
           <%# <li class="nav-item">
             <%= link_to "Messages", "#", class: "nav-link" %>
           <%# </li> %>

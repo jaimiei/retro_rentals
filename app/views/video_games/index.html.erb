@@ -1,12 +1,37 @@
 <div class="container">
-  <h1 class="text-center">Retro Rentals</h1>
-  <h3 class="text-center">Video Games</h3>
-    <div>
-      <ul class="list-unstyled">
-        <% @video_games.each do |video_game| %>
-          <li><%= link_to video_game.title, video_game_path(video_game), class: "text-decoration-none" %></li>
-        <% end %>
-      </ul>
+  <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+  <div class="search-form-control form-group">
+    <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+    <button name="button" type="submit" class="btn btn-flat">
+      <i class="fas fa-search"></i> Search
+    </button>
+  </div>
+<% end %>
+<br>
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path "sonic.jpeg" %>')">
+  <div class="container text-center">
+    VIDEO GAMES
+  </div>
+  </div>
+  <br>
+
+    <div class="row">
+      <% @video_games.each do |video_game| %>
+        <div class="col-sm-4">
+            <ul class="card list-unstyled flex">
+              <li class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path "mgs.jpg" %>')">
+              <li class="list-unstyled"><%= link_to video_game.title, video_game_path(video_game), class: "text-decoration-none" %></li>
+            </ul>
+        </div>
+      <% end %>
     </div>
-      <%= link_to "Home", root_path, class: "text-decoration-none" %>
 </div>
+
+<%# <% @video_game.photos.each do |photo| %>
+  <%# <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %> %>
+<%# <% end %>
+
+<%# <%= link_to "Home", root_path, class: "text-decoration-none" %>
+
+<%# <li class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @video_game.photo.key, %>
