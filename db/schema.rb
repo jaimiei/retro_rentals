@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_10_161032) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_11_130852) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -51,6 +51,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_10_161032) do
     t.index ["video_game_id"], name: "index_requests_on_video_game_id"
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.text "content"
+    t.bigint "video_game_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["video_game_id"], name: "index_reviews_on_video_game_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -78,4 +86,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_10_161032) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "requests", "users"
   add_foreign_key "requests", "video_games"
+  add_foreign_key "reviews", "video_games"
 end
