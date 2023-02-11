@@ -47,6 +47,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_11_130852) do
     t.bigint "video_game_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "start_date"
+    t.date "end_date"
     t.index ["user_id"], name: "index_requests_on_user_id"
     t.index ["video_game_id"], name: "index_requests_on_video_game_id"
   end

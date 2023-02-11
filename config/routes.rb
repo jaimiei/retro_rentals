@@ -1,14 +1,12 @@
 Rails.application.routes.draw do
-  get 'reviews/new'
+  # root to: "pages#home"
   devise_for :users
   root to: "pages#home"
-  resources :video_games do
-    resources :reviews, only: [:new, :create]
-    resources :video_games, only: %i[index new create show]
-  end
-  resources :reviews, only: [:destroy]
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  #resources :video_games do
+    resources :video_games, only: %i[index new create show] do
+      resources :reviews, only: [:new, :create]
+      resources :requests, only: %i[new create show]
+    end
+    resources :reviews, only: [:destroy]
+  #end
 end

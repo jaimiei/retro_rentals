@@ -33,7 +33,7 @@ zelda = VideoGame.new(title: "Legend of Zelda: Ocarina of Time", console: "Ninte
 zelda.photo.attach(io: zelda_cover, filename: "Zelda_hwzt09", content_type: "image/WebP")
 zelda.save
 
-
+User.create!(email: "test@retro.com", password: "retrotest")
 # cod = { title: "Call of Duty 4: Modern Warfare", console: "Cross-platform", genre: "Shooter" }
 # zelda = { title: "Legend of Zelda: Ocarina of Time", console: "Nintendo", genre: "RPG" }
 # sonic = { title: "Sonic the Hedgehog", console: "Sega", genre: "Platformer" }
