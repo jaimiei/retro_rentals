@@ -20,18 +20,10 @@
       <% @video_games.each do |video_game| %>
         <div class="col-sm-4">
             <ul class="card list-unstyled flex">
-              <li class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path "mgs.jpg" %>')">
+              <li class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path video_game.photo.key %>')">
               <li class="list-unstyled"><%= link_to video_game.title, video_game_path(video_game), class: "text-decoration-none" %></li>
             </ul>
         </div>
       <% end %>
     </div>
 </div>
-
-<%# <% @video_game.photos.each do |photo| %>
-  <%# <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %> %>
-<%# <% end %>
-
-<%# <%= link_to "Home", root_path, class: "text-decoration-none" %>
-
-<%# <li class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @video_game.photo.key, %>
