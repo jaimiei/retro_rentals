@@ -17,11 +17,11 @@
   <br>
 
     <div class="row">
-      <% @video_games.sort.each do |video_game| %>
+      <% @video_games.each do |video_game| %>
         <div class="col-sm-4">
             <ul class="card list-unstyled flex">
-              <li class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path video_game.photo.key, height: 300, width: 600, crop: :fill  %>')">
-              <li class="list-unstyled"><%= link_to video_game.title, video_game_path(video_game), class: " link-secondary text-decoration-none" %></li>
+              <li class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path video_game.photo.key %>')">
+              <li class="list-unstyled"><%= link_to video_game.title, video_game_path(video_game), class: "text-decoration-none" %></li>
             </ul>
         </div>
       <% end %>

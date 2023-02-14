@@ -17,10 +17,11 @@ mgs_cover = URI.open("https://res.cloudinary.com/doaf60lu6/image/upload/v1676045
 mgs = VideoGame.new(
   title: "Metal Gear Solid",
   console: "Playstation",
-  genre: "Action")
-  # summary: "Players control Solid Snake, a soldier who infiltrates a nuclear weapons facility to
-  #  neutralize the terrorist threat from FOXHOUND, a renegade special forces unit.[7] Snake must
-  #   liberate hostages and stop the terrorists from launching a nuclear strike.")
+  genre: "Action",
+  summary: "Players control Solid Snake, a soldier who infiltrates a nuclear weapons facility to
+  neutralize the terrorist threat from FOXHOUND, a renegade special forces unit.[7] Snake must
+  liberate hostages and stop the terrorists from launching a nuclear strike."
+)
 mgs.photo.attach(io: mgs_cover, filename: "mgs_tyqflm", content_type: "image/jpg")
 mgs.save
 
@@ -48,9 +49,10 @@ crash_cover = URI.open("https://res.cloudinary.com/doaf60lu6/image/upload/v16761
 crash = VideoGame.new(
   title: "Crash Bandicoot",
   console: "Playstation",
-  genre: "Platformer")
-  # summary: "The game's premise chronicles the creation of the titular Crash, a bandicoot who has been uplifted
-  # by the mad scientist Doctor Neo Cortex."
+  genre: "Platformer",
+  summary: "The game's premise chronicles the creation of the titular Crash, a bandicoot who has been uplifted
+  by the mad scientist Doctor Neo Cortex."
+)
 crash.photo.attach(io: crash_cover, filename: "crash_dkhbhg", content_type: "image/webp")
 crash.save
 
@@ -58,9 +60,10 @@ goldeneye_cover = URI.open("https://res.cloudinary.com/doaf60lu6/image/upload/v1
 goldeneye = VideoGame.new(
   title: "Goldeneye 007",
   console: "Nintendo",
-  genre: "Shooter")
-  # summary: "Based on the 1995 James Bond film GoldenEye, the player controls the secret agent James Bond to prevent
-  # a criminal syndicate from using a satellite weapon."
+  genre: "Shooter",
+  summary: "Based on the 1995 James Bond film GoldenEye, the player controls the secret agent James Bond to prevent
+  a criminal syndicate from using a satellite weapon."
+)
 goldeneye.photo.attach(io: goldeneye_cover, filename: "goldeneye_f0z2of", content_type: "image/webp")
 goldeneye.save
 
