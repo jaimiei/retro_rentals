@@ -10,7 +10,7 @@
 <br>
 
 <div class="card-trip">
-  <%= image_tag "mgs.jpg" %>
+  <%= cl_image_tag @video_game.photo.key, height: 300, width: 400, crop: :fill  %>
   <div class="card-trip-infos">
     <div>
       <h2><%= @video_game.title %></h2>
@@ -30,7 +30,7 @@
   <% end %>
 </ul>
 <br>
-    </div>
+</div>
     <h2 class="card-trip-pricing">£9.99</h2>
   <%= image_tag "Jaimie-profile.jpg", class: "card-trip-user avatar-bordered" %>
 </div>
