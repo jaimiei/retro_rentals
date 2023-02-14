@@ -1,8 +1,11 @@
-<%= simple_form_for [@video_game, @request], data: { controller: 'flatpickr' } do |f| %>
-  <%= f.input :start_date, as: :string, input_html: { data: { flatpickr_target: "startTime" } } %>
-  <%= f.input :end_date, as: :string, input_html: { data: { flatpickr_target: "endTime" } } %>
-  <%= f.submit 'Request this game'%>
-<% end %>
+<div class="container">
+
+  <%= simple_form_for [@video_game, @request], data: { controller: 'flatpickr' } do |f| %>
+    <%= f.input :start_date, as: :string, input_html: { data: { flatpickr_target: "startTime" } } %>
+    <%= f.input :end_date, as: :string, input_html: { data: { flatpickr_target: "endTime" } } %>
+    <%= f.submit 'Request this game'%>
+  <% end %>
 
 
-<%= link_to "Back", video_games_path, class: "text-decoration-none" %>
+  <%= link_to "Back", video_games_path, class: "text-decoration-none" %>
+</div>
