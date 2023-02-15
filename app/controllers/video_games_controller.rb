@@ -1,6 +1,11 @@
 class VideoGamesController < ApplicationController
   def index
-    @video_games = VideoGame.all
+    if params[:query].present?
+      sql_query = "title ILIKE :query OR console ILIKE :query OR genre ILIKE :query"
+      @video_games = VideoGame.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @video_games = VideoGame.all
+    end
   end
 
   def show
