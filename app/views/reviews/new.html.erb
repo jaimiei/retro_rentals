@@ -1,7 +1,7 @@
-<div>
+<div class="container">
   <h1>New review</h1>
   <%= simple_form_for [@video_game, @review] do |f| %>
     <%= f.input :content %>
-    <%= f.submit "Submit review", class: "btn btn-primary" %>
+    <%= f.submit "Submit review", class: "btn btn-flat" %>
   <% end %>
 </div>
