@@ -4,13 +4,22 @@
       <%= image_tag "Yoshi.jpeg" %>
     <% end %>
 
+    <%= link_to root_path, class: "navbar-logo" do %>
+      <%= image_tag "rr-logo.png" %>
+    <% end %>
+
+<%= form_with url: video_games_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a game"
+  %>
+  <%= submit_tag "Search", class: "btn btn-flat" %>
+<% end %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <%= link_to root_path, class: "navbar-logo" do %>
-      <%= image_tag "rr-logo.png" %>
-    <% end %>
 
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
