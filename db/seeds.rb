@@ -29,7 +29,7 @@ crash.photo.attach(io: crash_cover, filename: "crash_dkhbhg", content_type: "ima
 crash.save
 
 dk_cover = URI.open("https://res.cloudinary.com/doaf60lu6/image/upload/v1676479160/donkey-kong_gbdwvz.jpg")
-dk = VideoGame.new(title: "Donkey Kong Country", console: "Xbox", genre: "Platfromer")
+dk = VideoGame.new(title: "Donkey Kong Country", console: "Nintendo", genre: "Platfromer")
 dk.photo.attach(io: dk_cover, filename: "donkey-kong_gbdwvz", content_type: "image/jpg")
 dk.save
 
@@ -59,7 +59,7 @@ zelda.photo.attach(io: zelda_cover, filename: "Zelda_hwzt09", content_type: "ima
 zelda.save
 
 mario_kart_cover = URI.open("https://res.cloudinary.com/doaf60lu6/image/upload/v1676479160/mario-kart_adeo1t.jpg")
-mario_kart = VideoGame.new(title: "Mario Kart 64", console: "Xbox", genre: "Racing")
+mario_kart = VideoGame.new(title: "Mario Kart 64", console: "Nintendo", genre: "Racing")
 mario_kart.photo.attach(io: mario_kart_cover, filename: "mario-kart_adeo1t", content_type: "image/jpg")
 mario_kart.save
 
@@ -69,7 +69,7 @@ mgs.photo.attach(io: mgs_cover, filename: "mgs_tyqflm", content_type: "image/jpg
 mgs.save
 
 perfect_dark_cover = URI.open("https://res.cloudinary.com/doaf60lu6/image/upload/v1676479160/perfect-dark_lva2g5.jpg")
-perfect_dark = VideoGame.new(title: "Perfect Dark", console: "Xbox", genre: "Shooter")
+perfect_dark = VideoGame.new(title: "Perfect Dark", console: "Nintendo", genre: "Shooter")
 perfect_dark.photo.attach(io: perfect_dark_cover, filename: "perfect-dark_lva2g5", content_type: "image/jpg")
 perfect_dark.save
 
@@ -104,7 +104,7 @@ mario.photo.attach(io: mario_cover, filename: "mario_xn89oa", content_type: "ima
 mario.save
 
 tetris_cover = URI.open("https://res.cloudinary.com/doaf60lu6/image/upload/v1676479161/tetris_uyiou8.jpg")
-tetris = VideoGame.new(title: "Tetris", console: "Playstation", genre: "Puzzle")
+tetris = VideoGame.new(title: "Tetris", console: "Nintendo", genre: "Puzzle")
 tetris.photo.attach(io: tetris_cover, filename: "tetris_uyiou8", content_type: "image/jpg")
 tetris.save
 
@@ -117,7 +117,5 @@ tomb_raider_cover = URI.open("https://res.cloudinary.com/doaf60lu6/image/upload/
 tomb_raider = VideoGame.new(title: "Tomb Raider", console: "Playstation", genre: "Action")
 tomb_raider.photo.attach(io: tomb_raider_cover, filename: "tomb-raider-1_rzren8", content_type: "image/png")
 tomb_raider.save
-
-User.create!(email: "test@retro.com", password: "retrotest")
 
 puts "Finished!"
