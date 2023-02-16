@@ -16,6 +16,7 @@
     <div>
       <br>
       <h2><%= @video_game.title %></h2>
+      <p><strong>Year: </strong> <%= @video_game.year %></p>
       <p><strong>Console: </strong><%= @video_game.console %></p>
       <p><strong>Genre: </strong> <%= @video_game.genre %></p>
       <br>
@@ -32,7 +33,7 @@
   </div>
 </div>
 
-<div class="card">
+<div class="card-trip">
   <h3><strong>Reviews</strong></h3>
   <p><%= link_to "Add review", new_video_game_review_path(@video_game), class: "btn btn-flat" %></p>
   <ul class="list-group">
