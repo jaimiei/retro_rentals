@@ -55,6 +55,33 @@
   font-family: 'Press Start 2P', cursive;
 }
 
+.card-category h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-category p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+.card-category .card-category-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-category-infos .card-category-pricing {
+  position: absolute;
+  right: 10px;
+  top: -60px;
+  width: 70px;
+}
+
 
 .card-trip {
   overflow: hidden;
@@ -65,17 +92,17 @@
 .card-trip > img {
   height: 400px;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .card-trip h2 {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-trip p {
-  font-size: 12px;
+  font-size: 16px;
   opacity: .7;
   margin: 0;
 }

@@ -1,6 +1,11 @@
 class VideoGamesController < ApplicationController
   def index
-    @video_games = VideoGame.all
+    if params[:query].present?
+      sql_query = "title ILIKE :query OR console ILIKE :query OR genre ILIKE :query"
+      @video_games = VideoGame.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @video_games = VideoGame.all
+    end
   end
 
   def show
@@ -10,7 +15,7 @@ class VideoGamesController < ApplicationController
   private
 
   def video_game_params
-    params.require(:video_game).permit(:title, :console, :genre, :summary, :photo)
+    params.require(:video_game).permit(:title, :console, :genre, :photo)
   end
 
 end

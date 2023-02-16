@@ -1,16 +1,49 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag "Yoshi.jpeg" %>
-    <% end %>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <%# <%= link_to root_path, class: "navbar-brand" do %>
+      <%# <%= image_tag "Yoshi.jpeg" %>
+    <%# <% end %>
 
     <%= link_to root_path, class: "navbar-logo" do %>
       <%= image_tag "rr-logo.png" %>
     <% end %>
+
+  <ul class="list-inline tabs-underlined pt-3">
+    <li>
+      <a href="/video_games" class="tab-underlined">All</a>
+    </li>
+    <li>
+      <a href="/video_games?query=nintendo&commit=Search" class="tab-underlined">Nintendo</a>
+    </li>
+    <li>
+      <a href="/video_games?query=playstation&commit=Search" class="tab-underlined">Playstation</a>
+    </li>
+    <li>
+      <a href="/video_games?query=xbox&commit=Search" class="tab-underlined">Xbox</a>
+    </li>
+    <li>
+      <a href="/video_games?query=sega&commit=Search" class="tab-underlined">Sega</a>
+    </li>
+    <li>
+      <a href="/video_games?query=pc&commit=Search" class="tab-underlined">PC</a>
+    </li>
+    <li>
+      <a href="/video_games?query=cross-platform&commit=Search" class="tab-underlined">Cross-platform</a>
+    </li>
+  </ul>
+
+<%= form_with url: video_games_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a game"
+  %>
+  <%= submit_tag "Search", class: "btn btn-flat" %>
+<% end %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
 
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
