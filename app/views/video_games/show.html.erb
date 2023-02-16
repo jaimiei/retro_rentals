@@ -1,5 +1,4 @@
 <div style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url('<%= image_path "ps-wallpaper.jpg"%>')">
-<div style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url('<%= image_path "ps-wallpaper.jpg"%>')">
 <div class="container">
 <br>
 
@@ -13,19 +12,8 @@
   </div>
 
 <div class="col-sm-6 card flex-end mb-3">
-<div class="row">
-  <div class="col-sm-6">
-    <div class="card flex mb-3">
-      <div class="card-trip">
-        <%= cl_image_tag @video_game.photo.key %>
-      </div>
-    </div>
-  </div>
-
-<div class="col-sm-6 card flex-end mb-3">
   <div class="card-trip-infos">
     <div>
-      <br>
       <br>
       <h2><%= @video_game.title %></h2>
       <p><strong>Console: </strong><%= @video_game.console %></p>
@@ -37,31 +25,6 @@
       <br>
       <br>
       <h2 class="card-trip-pricing">£9.99</h2>
-      <%= link_to "Book this game", new_video_game_request_path(@video_game), class: "btn btn-flat" %>
-      <%# <%= link_to "Back to Video Games", video_games_path, class: "btn btn-flat" %>
-    </div>
-        <%# <%= image_tag "Jaimie-profile.jpg", class: "card-trip-user avatar-bordered" %>
-  </div>
-</div>
-
-<div class="card">
-  <h3><strong>Reviews</strong></h3>
-  <p><%= link_to "Add review", new_video_game_review_path(@video_game), class: "btn btn-flat" %></p>
-  <ul class="list-group">
-    <% @video_game.reviews.each do |review| %>
-      <li class="list-group-item"><%= review.content %></li>
-      <%= link_to "Delete", review_path(review), class: "link-dark text-decoration-none", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%></li>
-    <% end %>
-  </ul>
-      <p><strong>Console: </strong><%= @video_game.console %></p>
-      <p><strong>Genre: </strong> <%= @video_game.genre %></p>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <h2 class="card-trip-pricing  ">£9.99</h2>
       <%= link_to "Book this game", new_video_game_request_path(@video_game), class: "btn btn-flat" %>
       <%# <%= link_to "Back to Video Games", video_games_path, class: "btn btn-flat" %>
     </div>
