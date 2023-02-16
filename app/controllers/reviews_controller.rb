@@ -20,6 +20,9 @@ class ReviewsController < ApplicationController
     @review.destroy
     redirect_to video_game_path(@review.video_game), status: :see_other
   end
+
+  def rating
+  end
   private
 
   def set_video_game
@@ -27,6 +30,6 @@ class ReviewsController < ApplicationController
   end
 
   def review_params
-    params.require(:review).permit(:content)
+    params.require(:review).permit(:content, :rating)
   end
 end
