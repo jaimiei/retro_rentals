@@ -14,16 +14,17 @@
 <div class="col-sm-6 card flex-end mb-3">
   <div class="card-trip-infos">
     <div>
+      <br>
       <h2><%= @video_game.title %></h2>
-      <p>Short description here!</p>
       <p><strong>Console: </strong><%= @video_game.console %></p>
       <p><strong>Genre: </strong> <%= @video_game.genre %></p>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
       <h2 class="card-trip-pricing">£9.99</h2>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
       <%= link_to "Book this game", new_video_game_request_path(@video_game), class: "btn btn-flat" %>
       <%# <%= link_to "Back to Video Games", video_games_path, class: "btn btn-flat" %>
     </div>
