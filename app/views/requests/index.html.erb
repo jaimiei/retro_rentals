@@ -1,3 +1,23 @@
-<p>Hello</p>
-<p>Goodbye</p>
-<p>Hello</p>
+<div class="container">
+  <h1>My Requests</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Video Game</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% current_user.requests.each do |request| %>
+        <tr>
+          <td><%= link_to request.video_game.title, video_game_path(request.video_game) %></td>
+          <td><%= request.start_date %></td>
+          <td><%= request.end_date %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to "New Request", new_video_game_request_path(@video_game), class: "text-decoration-none" %>
+  <%= link_to "Back", video_games_path, class: "text-decoration-none" %>
+</div>
