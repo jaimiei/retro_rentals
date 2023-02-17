@@ -12,26 +12,20 @@
   </div>
 
 <div class="col-sm-6 card flex-end mb-3">
-  <div class="card-trip-infos">
+  <div class="card-trip-infos py-2">
     <div>
-      <br>
       <h2><%= @video_game.title %></h2>
       <p><strong>Year: </strong> <%= @video_game.year %></p>
       <p><strong>Console: </strong><%= @video_game.console %></p>
       <p><strong>Genre: </strong> <%= @video_game.genre %></p>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <h2 class="card-trip-pricing">£9.99</h2>
+      <p><strong>Publisher: </strong> <%= @video_game.publisher %></p>
+      <p><strong>Summary: </strong> <%= @video_game.summary %></p>
+      <h2 class="card-trip-pricing">£<%= @video_game.price %> per day</h2>
       <%= link_to "Book this game", new_video_game_request_path(@video_game), class: "btn btn-flat" %>
-      <%# <%= link_to "Back to Video Games", video_games_path, class: "btn btn-flat" %>
     </div>
-        <%# <%= image_tag "Jaimie-profile.jpg", class: "card-trip-user avatar-bordered" %>
   </div>
 </div>
+      <%# <%= link_to "Back to Video Games", video_games_path, class: "btn btn-flat" %>
 
 <div class="card-trip">
   <h3><strong>Reviews</strong></h3>
