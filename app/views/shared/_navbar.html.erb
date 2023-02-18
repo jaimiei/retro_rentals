@@ -32,6 +32,8 @@
     </li>
   </ul>
 
+
+
 <%= form_with url: video_games_path, method: :get, class: "d-flex" do %>
   <%= text_field_tag :query,
     params[:query],
@@ -49,6 +51,12 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
+          <ul class="navbar-nav me-auto">
+            <%# ...existing code... %>
+            <li class="nav-item">
+              <%= link_to "Requests", requests_path, class: "nav-link" %>
+            </li>
+          </ul>
           <%# <li class="nav-item active">
             <%= link_to "Home", root_path, class: "nav-link" %>
           <%# </li> %>
