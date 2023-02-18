@@ -23,6 +23,12 @@ class ReviewsController < ApplicationController
 
   def rating
   end
+
+  def average
+    values = @rating
+    @average = values.sum / values.size.to_f
+  end
+
   private
 
   def set_video_game
