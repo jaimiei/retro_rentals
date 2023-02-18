@@ -1,3 +1,25 @@
-<p>Hello</p>
-<p>Goodbye</p>
-<p>Hello</p>
+<div class='container card my-3'>
+  <h1>Your Requests</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Video Game Title</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @requests.each do |request| %>
+        <tr>
+          <td><%= request.start_date %></td>
+          <td><%= request.end_date %></td>
+          <td><%= request.video_game.title %></td>
+          <td><%= link_to 'View', request, class: 'link-dark text-decoration-none' %></td>
+          <td><%= link_to 'Delete', request, class: 'link-dark text-decoration-none', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
