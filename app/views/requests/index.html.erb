@@ -16,8 +16,6 @@
           <td><%= request.start_date %></td>
           <td><%= request.end_date %></td>
           <td><%= request.video_game.title %></td>
-          <td><%= link_to 'View', request, class: 'link-dark text-decoration-none' %></td>
-          <td><%= link_to 'Delete', request, class: 'link-dark text-decoration-none', method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
