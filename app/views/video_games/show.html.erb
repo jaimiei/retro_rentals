@@ -20,16 +20,20 @@
       <p><strong>Genre: </strong> <%= @video_game.genre %></p>
       <p><strong>Publisher: </strong> <%= @video_game.publisher %></p>
       <p><strong>Summary: </strong> <%= @video_game.summary %></p>
-      <h2 class="card-trip-pricing">£<%= @video_game.price %> per day</h2>
+      <br>
+      <br>
+      <br>
+      <h2>£<%= @video_game.price %> per day</h2>
+      <br>
       <%= link_to "Book this game", new_video_game_request_path(@video_game), class: "btn btn-flat" %>
     </div>
   </div>
 </div>
       <%# <%= link_to "Back to Video Games", video_games_path, class: "btn btn-flat" %>
 
-<div class="card-trip">
+<div class="card-trip my-3">
   <h3><strong>Reviews</strong></h3>
-  <p><%= link_to "Add review", new_video_game_review_path(@video_game), class: "btn btn-flat" %></p>
+  <p><%= link_to "Add review", new_video_game_review_path(@video_game), class: "btn btn-flat mb-3" %></p>
   <ul class="list-group">
     <% @video_game.reviews.each do |review| %>
       <li class="list-group-item"><%= review.content %></li>
