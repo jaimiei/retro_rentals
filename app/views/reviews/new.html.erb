@@ -1,3 +1,4 @@
+<div style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url('<%= image_path "ps-wallpaper.jpg"%>')">
 <div class="container">
   <h1>New review</h1>
   <%= simple_form_for [@video_game, @review] do |f| %>
@@ -5,4 +6,5 @@
     <%= f.input :rating, collection: (1..5).to_a, label: "Rate your experience", input_html: {data: {controller: "star-rating"}} %>
     <%= f.submit "Submit review", class: "btn btn-flat" %>
   <% end %>
+</div>
 </div>
