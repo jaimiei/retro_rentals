@@ -19,7 +19,7 @@ burnout = VideoGame.new(
   console: "Cross-platform",
   genre: "Racing",
   year: "2004",
-  price: "3.99",
+  price: "1.99",
   publisher: "EA Games",
   summary: "Burnout 3: Takedown is a racing video game with arcade-style gameplay that emphasises dangerous
   and fast-paced driving. The game features standard circuit races which take place on carriageways
@@ -34,7 +34,7 @@ cod = VideoGame.new(
   console: "Cross-platform",
   genre: "Shooter",
   year: "2007",
-  price: "2.99",
+  price: "1.99",
   publisher: "Activision",
   summary: "Call of Duty 4: Modern Warfare is a 2007 first-person shooter video game published by Activision.
    It is the fourth main installment in the Call of Duty series. The game breaks away from the World War II
@@ -49,7 +49,7 @@ crash = VideoGame.new(
   console: "Playstation 1",
   genre: "Platformer",
   year: "1996",
-  price: "4.99",
+  price: "2.99",
   publisher: "Sony Computer Entertainment",
   summary: "The game's premise chronicles the creation of the titular Crash, a bandicoot who has been
    uplifted by the mad scientist Doctor Neo Cortex. The story follows Crash as he aims to prevent Cortex's
@@ -64,7 +64,7 @@ dk = VideoGame.new(
   console: "Super Nintendo Entertainment System",
   genre: "Platfromer",
   year: "1994",
-  price: "4.99",
+  price: "3.99",
   publisher: "Nintendo",
   summary: "It is a reboot of Nintendo's Donkey Kong franchise and follows the gorilla Donkey Kong and his
    nephew Diddy Kong as they set out to recover their stolen banana hoard from the crocodile King K. Rool
@@ -79,7 +79,7 @@ doom = VideoGame.new(
   console: "PC",
   genre: "Shooter",
   year: "1993",
-  price: "4.99",
+  price: "3.99",
   publisher: "id Software",
   summary: "Players assume the role of a space marine, popularly known as Doomguy, fighting their way
    through hordes of invading demons from hell."
@@ -93,7 +93,7 @@ goldeneye = VideoGame.new(
   console: "Nintendo 64",
   genre: "Shooter",
   year: "1997",
-  price: "4.99",
+  price: "3.99",
   publisher: "Nintendo",
   summary: "Based on the 1995 James Bond film GoldenEye, the player controls the secret agent James Bond to prevent
    a criminal syndicate from using a satellite weapon. They navigate a series of levels to complete objectives,
@@ -108,7 +108,7 @@ gta = VideoGame.new(
   console: "Cross-platform",
   genre: "Action",
   year: "2002",
-  price: "3.99",
+  price: "2.99",
   publisher: "Rockstar Games",
   summary: "Set in 1986 within the fictional Vice City (based on Miami and Miami Beach), the
    single-player story follows mobster Tommy Vercetti's rise to power after being released from
@@ -124,7 +124,7 @@ half_life = VideoGame.new(
   console: "PC",
   genre: "Shooter",
   year: "2004",
-  price: "4.99",
+  price: "3.99",
   publisher: "Valve",
   summary: "Players control Gordon Freeman as he joins a resistance movement to liberate the Earth from the
    control of an alien empire, the Combine."
@@ -138,6 +138,7 @@ halo = VideoGame.new(
   console: "Xbox",
   genre: "Shooter",
   year: "2001",
+  price: "2.99",
   publisher: "Microsoft Game Studios",
   summary: "Halo is set in the twenty-sixth century, with the player assuming the role of the Master
    Chief, a cybernetically enhanced supersoldier. Players battle aliens as they attempt to uncover
@@ -152,7 +153,7 @@ zelda = VideoGame.new(
   console: "Nintendo 64",
   genre: "RPG",
   year: "1998",
-  price: "4.99",
+  price: "3.99",
   publisher: "Nintendo",
   summary: "The player controls Link in the fantasy land of Hyrule on a quest to stop the evil king
    Ganondorf, by traveling through time and navigating dungeons and an overworld."
@@ -166,7 +167,7 @@ mario_kart = VideoGame.new(
   console: "Nintendo 64",
   genre: "Racing",
   year: "1996",
-  price: "4.99",
+  price: "2.99",
   publisher: "Nintendo",
   summary: "Players take control of one of eight characters from the Mario franchise, who race around 16 tracks
    (4 in each of 4 cups) with items that can either harm opponents or aid the user."
@@ -180,7 +181,7 @@ mgs = VideoGame.new(
   console: "Playstation 1",
   genre: "Action",
   year: "1998",
-  price: "4.99",
+  price: "3.99",
   publisher: "Konami",
   summary: "Players control Solid Snake, a soldier who infiltrates a nuclear weapons facility to
    neutralize the terrorist threat from FOXHOUND, a renegade special forces unit. Snake must
@@ -195,7 +196,7 @@ metroid = VideoGame.new(
   console: "Nintendo Entertainment System",
   genre: "Action",
   year: "1987",
-  price: "4.99",
+  price: "3.99",
   publisher: "Nintendo",
   summary: "Set on the planet Zebes, the story follows Samus Aran as she attempts to retrieve the parasitic
    Metroid organisms that were stolen by Space Pirates, who plan to replicate the Metroids by exposing them
@@ -210,7 +211,7 @@ outrun = VideoGame.new(
   console: "Sega Mega Drive",
   genre: "Racing",
   year: "1986",
-  price: "4.99",
+  price: "2.99",
   publisher: "Sega",
   summary: "Out Run is a 3D driving video game in which the player controls a Ferrari Testarossa Spider
    from a third-person rear perspective. The object of the game is to reach the finish line against a timer."
@@ -224,7 +225,7 @@ pacman = VideoGame.new(
   console: "Cross-platform",
   genre: "Maze",
   year: "1980",
-  price: "4.99",
+  price: "1.99",
   publisher: "Namco",
   summary: "Pac-Man is an action maze chase video game; the player controls the eponymous character
    through an enclosed maze. The objective of the game is to eat all of the dots placed in the maze while
@@ -239,7 +240,7 @@ perfect_dark = VideoGame.new(
   console: "Nintendo 64",
   genre: "Shooter",
   year: "2000",
-  price: "3.99",
+  price: "2.99",
   publisher: "Rare",
   summary: "The first game of the Perfect Dark series, it follows Joanna Dark, an agent of the Carrington Institute
    research centre, as she attempts to stop an extraterrestrial conspiracy by rival corporation dataDyne."
@@ -253,7 +254,7 @@ pokemon = VideoGame.new(
   console: "Game Boy",
   genre: "RPG",
   year: "1998",
-  price: "4.99",
+  price: "2.99",
   publisher: "Nintendo",
   summary: "The player controls the protagonist from an overhead perspective and navigates him throughout
    the fictional region of Kanto in a quest to master Pokémon battling."
@@ -267,7 +268,7 @@ re4 = VideoGame.new(
   console: "Cross-platform",
   genre: "Horror",
   year: "2005",
-  price: "2.99",
+  price: "1.99",
   publisher: "Capcom",
   summary: "Players control U.S. government special agent Leon S. Kennedy, who is sent on a mission to rescue the U.S.
    president's daughter Ashley Graham, who has been kidnapped by a cult. In rural Spain, Leon fights hordes of enemies
@@ -282,7 +283,7 @@ colossus = VideoGame.new(
   console: "Playstation 2",
   genre: "Action",
   year: "2005",
-  price: "3.99",
+  price: "2.99",
   publisher: "Sony Computer Entertainment",
   summary: "The player assumes the role of Wander as he embarks on a mission that might entail Mono's resurrection:
    to locate and destroy the colossi, sixteen massive beings spread across the forbidden land, which the protagonist
@@ -297,7 +298,7 @@ sim_city = VideoGame.new(
   console: "PC",
   genre: "City-building",
   year: "1993",
-  price: "3.99",
+  price: "1.99",
   publisher: "Maxis",
   summary: "The objective of the game is to create a city, develop residential and industrial areas, build
    infrastructure and collect taxes for further development of the city."
@@ -311,7 +312,7 @@ sonic = VideoGame.new(
   console: "Sega Genesis",
   genre: "Platformer",
   year: "1991",
-  price: "4.99",
+  price: "2.99",
   publisher: "Sega",
   summary: "Players control Sonic the Hedgehog, who can run at supersonic speeds; Sonic sets out on a quest to
    defeat Dr. Robotnik, a scientist who has imprisoned animals in robots and seeks the powerful Chaos Emeralds."
@@ -325,7 +326,7 @@ ssx = VideoGame.new(
   console: "Cross-platform",
   genre: "Sports",
   year: "2001",
-  price: "3.99",
+  price: "1.99",
   publisher: "EA Sports BIG",
   summary: "SSX Tricky is a snowboarding video game. In SSX Tricky, players can choose among twelve characters,
    participate in races or trick competitions, and earn rewards."
@@ -339,7 +340,7 @@ streets = VideoGame.new(
   console: "Sega Mega Drive",
   genre: "Fighting",
   year: "1992",
-  price: "4.99",
+  price: "3.99",
   publisher: "Sega",
   summary: "Streets of Rage 2 is a side-scrolling beat-em-up in which one or two players fight against waves of
    enemies while picking up weapons and items along the way. "
@@ -353,7 +354,7 @@ mario = VideoGame.new(
   console: "Nintendo 64",
   genre: "Platformer",
   year: "1996",
-  price: "4.99",
+  price: "2.99",
   publisher: "Nintendo",
   summary: "Bowser, invades Princess Peach's castle and hides the castle's sources of protection, the
    Power Stars, in many different worlds inside magical paintings. As Mario, the player collects Power Stars to
@@ -368,7 +369,7 @@ tetris = VideoGame.new(
   console: "Game Boy",
   genre: "Puzzle",
   year: "1984",
-  price: "4.99",
+  price: "1.99",
   publisher: "Nintendo",
   summary: "In Tetris, players complete lines by moving differently shaped pieces (tetrominoes), which descend onto the
    playing field. The completed lines disappear and grant the player points, and the player can proceed to fill the
@@ -384,7 +385,7 @@ timesplitters = VideoGame.new(
   console: "Cross-platform",
   genre: "Shooter",
   year: "2002",
-  price: "3.99",
+  price: "2.99",
   publisher: "Eidos Interactive",
   summary: "The game features a story mode consisting of ten levels in which the player assumes the role of one of two
    space marines as they attempt to stop the alien race of TimeSplitters from ruining history by collecting the time
@@ -399,7 +400,7 @@ tomb_raider = VideoGame.new(
   console: "Playstation 1",
   genre: "Action",
   year: "1996",
-  price: "4.99",
+  price: "3.99",
   publisher: "Eidos Interactive",
   summary: "The game follows archaeologist-adventurer Lara Croft, who is hired by businesswoman Jacqueline Natla to
    find an artefact called the Scion of Atlantis. Gameplay features Lara navigating levels split into multiple areas
@@ -414,7 +415,7 @@ tony_hawk = VideoGame.new(
   console: "Cross-platform",
   genre: "Sports",
   year: "2000",
-  price: "3.99",
+  price: "2.99",
   publisher: "Activision",
   summary: "The player takes control of a variety of skateboarders and either performs skateboarding tricks or
    collects certain objects."
