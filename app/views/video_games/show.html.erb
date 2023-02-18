@@ -36,10 +36,13 @@
   <p><%= link_to "Add review", new_video_game_review_path(@video_game), class: "btn btn-flat mb-3" %></p>
   <ul class="list-group">
     <% @video_game.reviews.each do |review| %>
+      <li class="star-rating"> Rating: <%= review.rating %></li>
+        <% if review.rating %>
+          <%= '⭐️' * review.rating %>
+        <%end%>
       <li class="list-group-item"><%= review.content %></li>
-      <%= link_to "Delete", review_path(review), class: "link-dark text-decoration-none", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%></li>
+      <%= link_to "Delete", review_path(review), class: "link text-decoration-none", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%></li>
     <% end %>
   </ul>
-</div>
 </div>
 </div>

@@ -11,6 +11,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_02_17_171220) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -58,6 +59,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_17_171220) do
     t.bigint "video_game_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "rating"
     t.index ["video_game_id"], name: "index_reviews_on_video_game_id"
   end
 

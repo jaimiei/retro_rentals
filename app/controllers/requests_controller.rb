@@ -1,10 +1,15 @@
 class RequestsController < ApplicationController
-  before_action :set_video_game
+  before_action :set_video_game, only: %i[create new show]
+  def index
+    @requests = current_user.requests
+  end
+
   def new
     @request = Request.new
   end
 
   def show
+    # @request = Request.find(params[:id])
   end
 
   def create
@@ -12,7 +17,7 @@ class RequestsController < ApplicationController
     @request.user = current_user
     @request.video_game = @video_game
     if @request.save
-      redirect_to video_game_request_path(@video_game, @request), notice: "booking successful!"
+      redirect_to video_game_request_path(@video_game, @request), notice: "Booking successful!"
     else
       render :new, status: :unprocessable_entity
     end
