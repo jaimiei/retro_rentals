@@ -1,4 +1,4 @@
-<div style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url('<%= cl_image_path "ps-wallpaper_ymzyxn.jpg"%>')">
+<div style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url('<%= image_path "ps-wallpaper.jpg"%>')">
 <div class="container">
   <%= simple_form_for [@video_game, @request], data: { controller: 'flatpickr' } do |f| %>
     <%= f.input :start_date, as: :string, input_html: { data: { flatpickr_target: "startTime" } } %>
