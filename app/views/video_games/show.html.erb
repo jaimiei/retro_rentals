@@ -34,7 +34,7 @@
 <div class="card-trip my-3">
   <h3><strong>Reviews</strong></h3>
   <p><%= link_to "Add review", new_video_game_review_path(@video_game), class: "btn btn-flat mb-3" %></p>
-  <ul class="list-group">
+  <ul class="list-group list-unstyled">
     <% @video_game.reviews.each do |review| %>
       <li class="star-rating"> Rating: <%= review.rating %></li>
         <% if review.rating %>
