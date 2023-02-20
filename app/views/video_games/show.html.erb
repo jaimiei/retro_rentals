@@ -1,4 +1,4 @@
-<div style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url('<%= cl_image_path "ps-wallpaper_ymzyxn.jpg"%>')">
+<div style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url('<%= image_path "ps-wallpaper.jpg"%>')">
 <div class="container">
 <br>
 
@@ -36,7 +36,7 @@
   <p><%= link_to "Add review", new_video_game_review_path(@video_game), class: "btn btn-flat mb-3" %></p>
   <ul class="list-group">
     <% @video_game.reviews.each do |review| %>
-      <li class="star-rating list-unstyled"> Rating: <%= review.rating %></li>
+      <li class="star-rating"> Rating: <%= review.rating %></li>
         <% if review.rating %>
           <%= '⭐️' * review.rating %>
         <%end%>
